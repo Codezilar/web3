@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import { MdSwapVert } from "react-icons/md";
 import { IoSettings } from "react-icons/io5";
