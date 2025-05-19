@@ -1,5 +1,4 @@
 import React from 'react'
-import { BiWallet } from "react-icons/bi";
 import Button from './ui/Button';
 
 const Connect = () => {
