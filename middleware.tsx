@@ -5,7 +5,7 @@ const protectedRoute = createRouteMatcher([
   '/faucet',
   '/nftclaims',
   '/swap',
-  '/tokenclaim',
+  '/tokenclaims',
 ]);
 
 export default clerkMiddleware(async (auth, req) => {
