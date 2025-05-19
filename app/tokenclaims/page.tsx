@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react'
 import { tokenclaim } from '../data'
+import Image from 'next/image';
 
 const page = () => {
   const [activeFilter, setActiveFilter] = useState('Ongoing');
@@ -43,7 +44,7 @@ const page = () => {
         <div className="tokenclaims-wrapp">
           {filteredTokens.map(((token, index) =>(  
             <div className="tokenclaims-content glass-card" key={index}>
-              <img src={token.img} alt={"nf"} className='token-img'/>
+              <Image src={token.img} alt={"nf"} width={500} height={300} className='token-img'/>
               <div className="tokenclaims-content-text">
                 <div className="token-text-top">
                   <p className={`current_condition ${activeFilter== "Ongoing"? "Ongoing":""} ${activeFilter== "Upcoming"? "Upcoming":""} ${activeFilter== "Ended"? "Ended":""} ${activeFilter== "All"? "All":""} `}>{token.condition}</p>
