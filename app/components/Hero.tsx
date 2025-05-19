@@ -1,6 +1,6 @@
+"use client"
 import Link from 'next/link'
 import React from 'react'
-import { BiWallet } from "react-icons/bi";
 import { FaArrowRight } from "react-icons/fa";
 import Button from './ui/Button';
 

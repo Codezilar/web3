@@ -7,10 +7,7 @@ import { FaBars } from "react-icons/fa6";
 import { FaTimes } from "react-icons/fa";
 
 import {
-    SignInButton,
-    SignUpButton,
     SignedIn,
-    SignedOut,
     UserButton,
   } from '@clerk/nextjs'
 import Button from './ui/Button';

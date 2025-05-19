@@ -2,7 +2,6 @@
 import React from 'react';
 import { navItems } from '../data';
 import Link from 'next/link';
-import { BiWallet } from "react-icons/bi";
 import Button from './ui/Button';
 
 
