@@ -1,6 +1,5 @@
 "use client"
 import { tokenclaim } from '../data'
-import Image from 'next/image';
 import React, { useState } from 'react'
 
 
@@ -40,7 +39,7 @@ const TokenClaim = () => {
         <div className="tokenclaims-wrapp">
           {filteredTokens.map(((token, index) =>(  
             <div className="tokenclaims-content glass-card" key={index}>
-              <Image src={'/NAVIGATE_4K_S20_loop-poster@sm.webp'} alt={"nf"} width={500} height={300} className='token-img'/>
+              <img src={token.img} alt={"nf"} width={500} height={300} className='token-img'/>
               <div className="tokenclaims-content-text">
                 <div className="token-text-top">
                   <p className={`current_condition ${activeFilter== "Ongoing"? "Ongoing":""} ${activeFilter== "Upcoming"? "Upcoming":""} ${activeFilter== "Ended"? "Ended":""} ${activeFilter== "All"? "All":""} `}>{token.condition}</p>
