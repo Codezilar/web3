@@ -1,5 +1,6 @@
 import React from 'react'
 import { BiWallet } from "react-icons/bi";
+import Button from './ui/Button';
 
 const Connect = () => {
   return (
@@ -9,12 +10,7 @@ const Connect = () => {
             <p>
                 Join thousands of users who have already simplified their DeFi experience with FlowDex.
             </p>
-            <button className='button'>
-                <BiWallet />
-                <span>
-                    Connect Wallet
-                </span>
-            </button>
+            <Button />
         </div>
     </div>
   )

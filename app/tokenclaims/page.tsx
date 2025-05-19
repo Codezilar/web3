@@ -1,7 +1,12 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import { tokenclaim } from '../data'
 
 const page = () => {
+  const [activeFilter, setActiveFilter] = useState('Ongoing');
+  const filteredTokens = tokenclaim.filter(token => 
+    activeFilter === 'All' ? true : token.condition === activeFilter
+  );
   return (
     <div className='tokenclaims'>
       <h1 className='gradient-text'>Token Claims</h1>
@@ -10,18 +15,38 @@ const page = () => {
       </div>
       <div className="tokenclaims-container">
         <div className="token-navigate">
-          <button className='tok-active'>Onging</button>
-          <button>Upcoming</button>
-          <button>Ended</button>
-          <button>All</button>
+        <button 
+          className={activeFilter === 'Ongoing' ? 'tok-active' : ''}
+          onClick={() => setActiveFilter('Ongoing')}
+        >
+          Ongoing
+        </button>
+        <button 
+          className={activeFilter === 'Upcoming' ? 'tok-active' : ''}
+          onClick={() => setActiveFilter('Upcoming')}
+        >
+          Upcoming
+        </button>
+        <button 
+          className={activeFilter === 'Ended' ? 'tok-active' : ''}
+          onClick={() => setActiveFilter('Ended')}
+        >
+          Ended
+        </button>
+        <button 
+          className={activeFilter === 'All' ? 'tok-active' : ''}
+          onClick={() => setActiveFilter('All')}
+        >
+          All
+        </button>
         </div>
         <div className="tokenclaims-wrapp">
-          {tokenclaim.map(((token, index) =>(  
+          {filteredTokens.map(((token, index) =>(  
             <div className="tokenclaims-content glass-card" key={index}>
-              <img src={'/NAVIGATE_4K_S20_loop-poster@sm.webp'} alt={"nf"} className='token-img'/>
+              <img src={token.img} alt={"nf"} className='token-img'/>
               <div className="tokenclaims-content-text">
                 <div className="token-text-top">
-                  <p className='ongoing'>{token.condition}</p>
+                  <p className={`current_condition ${activeFilter== "Ongoing"? "Ongoing":""} ${activeFilter== "Upcoming"? "Upcoming":""} ${activeFilter== "Ended"? "Ended":""} ${activeFilter== "All"? "All":""} `}>{token.condition}</p>
                   <p className='date'>
                     {token.startDate} - {token.endDate}
                   </p>

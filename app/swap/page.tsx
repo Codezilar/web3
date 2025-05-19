@@ -1,4 +1,6 @@
 import React from 'react'
+import { MdSwapVert } from "react-icons/md";
+import { IoSettings } from "react-icons/io5";
 
 const page = () => {
   return (
@@ -32,7 +34,7 @@ const page = () => {
                 </div>
                 <div className="swap-arrow">
                     <span>
-
+                        <MdSwapVert />
                     </span>
                 </div>   
                 <div className="swap-contenter">
@@ -65,10 +67,10 @@ const page = () => {
                 </div>
                 <div className="swap-navs">
                     <button>
-                        
+                        <MdSwapVert />       
                     </button>
                     <button>
-
+                        <IoSettings />
                     </button>
                 </div>
                 <button className='swap-final-btn'>

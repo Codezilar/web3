@@ -17,7 +17,7 @@ const Trending = () => {
                     <div className="port-asset-content glass-card" key={index}>
                         <div className="port-asset-top">
                             <div className="port-asset-top-left">
-                                <Image src={'/globe.svg'} alt='coin' height={50} width={50} />
+                                <Image src={port.img} className='rounded-full' alt='coin' height={50} width={50} />
                                 <div className="port-asset-top-text">
                                     <h4>{port.coin}</h4>
                                     <p>{port.coinShort}</p>
